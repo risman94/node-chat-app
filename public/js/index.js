@@ -16,13 +16,6 @@ socket.on('newMessage', function (message) {
 	jQuery('#messages').append(li);
 });
 
-socket.emit('createMessage', {
-	from: 'risman',
-	text: 'test text'
-}, function (data) {
-	console.log('got it', data);
-});
-
 jQuery('#message-form').on('submit', function (e) {
 	e.preventDefault();
 
